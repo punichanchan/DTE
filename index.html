@@ -961,7 +961,7 @@ window.doExportText = function(pid, withCharacter){
     } else {
       const sp=p.speakers.find(s=>String(s.id)===String(l.speakerId))||p.speakers[0];
       const text=effText(l);
-      out += withCharacter ? `${sp.name}「${text}」\n` : `${text}\n`;
+      out += withCharacter ? `${sp.name}「${text}」\n` : `「${text}」\n`;
     }
   });
   const blob=new Blob(['\uFEFF'+out],{type:'text/plain;charset=utf-8'});
